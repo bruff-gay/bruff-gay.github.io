@@ -3,45 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruff.gay Your favorite corner of the internet</title>
+    <title>Bruff.gay - Your Corner of the Internet</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            height: 100vh; /* Ensure the layout fills the viewport height */
+            background-color: #121212; /* Dark mode background */
+            color: #eee; /* Light text */
+            line-height: 1.6;
         }
 
         .header {
-            background-color: #131212c7;
-            padding: 1em;
+            background-color: #282828;
+            padding: 1.5em;
             text-align: center;
+            border-bottom: 1px solid #444;
+        }
+
+        h1 {
+            margin-bottom: 0.5em;
+            font-size: 2.5em;
+            font-weight: 300; /* Lighter font weight */
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #ccc;
         }
 
         .main-content {
             display: flex;
-            flex: 1; /* Take up the majority of the space */
+            flex: 1;
+            padding: 20px;
+        }
+
+        .repo-feature, .bluesky-iframe {
+            padding: 20px;
+            overflow: auto;
         }
 
         .repo-feature {
-            width: 70%;  /* Adjust as needed for desired proportions */
-            padding: 20px;
-            overflow: auto; /* Add scrollbars if content overflows */
+            width: 70%;
         }
 
         .bluesky-iframe {
-            width: 30%;  /* Adjust as needed */
-            padding: 20px;
-            border: 1px solid #ccc;
+            width: 30%;
+            border: none; /* Remove border */
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 1em;
+            color: #eee;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            color: #87CEEB; /* Sky Blue */
+            text-decoration: none;
+            transition: color 0.2s ease; /* Smooth transition */
+        }
+
+        a:hover {
+            color: #ADD8E6; /* Lighter blue on hover */
         }
 
         .border-header {
-            background-color: #686767;
-            padding: 10px;
+            background-color: #282828;
+            padding: 1em;
             text-align: center;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #444;
+        }
+
+        pre {
+            white-space: pre-wrap; /* Wrap long lines */
+            font-family: monospace;
+            color: #aaa;
         }
     </style>
 </head>
@@ -54,30 +102,27 @@
     <div class="main-content">
         <div class="repo-feature">
             <h2>Github Repositories</h2>
-            <!--  Replace this with dynamically generated content from your Github API if desired -->
             <p>Check out my projects on <a href="https://github.com/bruff-gay">Github</a></p>
-            <ul style="list-style-type: none;">
+            <ul>
                 <li><a href="https://github.com/bruff-gay/redlistjson">A json list of subreddits</a></li>
                 <li><a href="https://github.com/bruff-gay/redstumblr">Redstumblarr a random reddit stumbler for firefox</a></li>
-                <!-- Add more repos as needed -->
             </ul>
         </div>
 
         <div class="bluesky-iframe">
-              <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed@latest/dist/bsky-embed.es.js" async></script>
-
-  <bsky-embed
-    username="bruff.gay"
-    limit="5"
-    load-more="true"
-  >
-  </bsky-embed>
+            <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed@latest/dist/bsky-embed.es.js" async></script>
+            <bsky-embed
+                username="bruff.gay"
+                limit="5"
+                load-more="true"
+            >
+            </bsky-embed>
         </div>
     </div>
 
-    <div class="border-header border-top p-3">
+    <div class="border-header">
         <strong>Bear</strong>
-        <pre class="">
+        <pre>
             (()__(()
            /       \
           ( /    \  \
