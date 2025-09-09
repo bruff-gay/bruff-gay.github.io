@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStumblarr – Offline Reddit Stumbler</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --bg-secondary: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-secondary: #8b949e;
+            --accent: #58a6ff;
+            --accent-hover: #79c0ff;
+            --success: #3fb950;
+            --danger: #f85149;
+        }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: var(--accent);
+        }
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin: 0.5rem 0 0;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            font-size: 1.75rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.75rem;
+        }
+        ul li::before {
+            content: "✔";
+            color: var(--success);
+            position: absolute;
+            left: 1rem;
+            top: 0.9rem;
+            font-size: 0.9rem;
+        }
+        code {
+            background: rgba(88, 166, 255, 0.15);
+            color: var(--accent);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+        pre {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        pre code {
+            background: none;
+            color: var(--text);
+            padding: 0;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+        }
+        footer a {
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RedStumblarr</h1>
+        <p>Offline, privacy-first "stumbler" for Reddit</p>
+    </header>
+
+    <main>
+        <section>
+            <p>RedStumblarr is a tiny Firefox WebExtension that opens a random subreddit with a single click. It works completely offline once the list is cached, ensuring your privacy.</p>
+        </section>
+
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>One-click “Random” button on the toolbar</li>
+                <li>Works completely offline once the list is cached</li>
+                <li>Add favorites with a second click</li>
+                <li>Opens links in new tabs; respects old.reddit.com preference</li>
+                <li>Zero permissions beyond storage and the Reddit hosts</li>
+                <li>&lt; 150 kB packed</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Install (Production)</h2>
+            <ol>
+                <li>Grab the latest signed <code>.xpi</code> from <a href="https://github.com/bruff-gay/redstumblarr/releases" target="_blank">Releases</a></li>
+                <li>Firefox → Add-ons Manager → Install Add-on From File</li>
+                <li>Icon appears in the toolbar—start stumbling.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Install (Development)</h2>
+            <pre><code>git clone https://github.com/bruff-gay/redstumblarr.git
+cd redstumblarr
+# no build step; pure JS
+zip -r pubrelease.zip . -x '*.git*' README.md
+# Open about:debugging → Load Temporary Add-on → select the zip.</code></pre>
+        </section>
+
+        <section>
+            <h2>Goal for next milestone (v3.0)</h2>
+            <ul>
+                <li>Chrome-MV3 parity with a single codebase</li>
+                <li>Optional custom user lists (JSON drag-and-drop)</li>
+                <li>Keyboard shortcut (Ctrl+Shift+S) configurable via UI</li>
+                <li>Translations for Spanish</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Bug reports</h2>
+            <p>File issues on GitHub: <a href="https://github.com/bruff-gay/redstumblarr/issues" target="_blank">github.com/bruff-gay/redstumblarr/issues</a></p>
+            <p>Please include:</p>
+            <ul>
+                <li>Firefox version</li>
+                <li>Extension version</li>
+                <li>Console logs (<code>about:debugging</code> ➜ Inspect)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>License</h2>
+            <p>MIT © 2025 bruff-gay</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>RedStumblarr is provided “as-is” under the MIT License. By using RedStumblarr you agree that the authors are not responsible for any content you encounter or any damages that may arise.</p>
+        <p><a href="https://github.com/bruff-gay/redstumblarr">GitHub Repository</a></p>
+    </footer>
+</body>
+</html>
