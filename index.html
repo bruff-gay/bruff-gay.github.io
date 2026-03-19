@@ -6,13 +6,13 @@
     <title>Bruff.gay - Your Corner of the Internet</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            background-color: #121212; /* Dark mode background */
-            color: #eee; /* Light text */
+            background-color: #121212;
+            color: #eee;
             line-height: 1.6;
         }
 
@@ -26,12 +26,13 @@
         h1 {
             margin-bottom: 0.5em;
             font-size: 2.5em;
-            font-weight: 300; /* Lighter font weight */
+            font-weight: 300;
         }
 
-        p {
-            font-size: 1.1em;
-            color: #ccc;
+        .tagline {
+            font-size: 1.2em;
+            color: #87CEEB;
+            font-style: italic;
         }
 
         .main-content {
@@ -51,7 +52,7 @@
 
         .bluesky-iframe {
             width: 30%;
-            border: none; /* Remove border */
+            border: none;
         }
 
         h2 {
@@ -70,13 +71,18 @@
         }
 
         a {
-            color: #87CEEB; /* Sky Blue */
+            color: #87CEEB;
             text-decoration: none;
-            transition: color 0.2s ease; /* Smooth transition */
+            transition: color 0.2s ease;
         }
 
         a:hover {
-            color: #ADD8E6; /* Lighter blue on hover */
+            color: #ADD8E6;
+        }
+
+        .social-links {
+            margin: 1em 0;
+            font-size: 1.1em;
         }
 
         .border-header {
@@ -87,7 +93,7 @@
         }
 
         pre {
-            white-space: pre-wrap; /* Wrap long lines */
+            white-space: pre-wrap;
             font-family: monospace;
             color: #aaa;
         }
@@ -96,13 +102,17 @@
 <body>
     <div class="header">
         <h1>Bruff.gay</h1>
-        <p>Sorry for the dust</p>
+        <p class="tagline">Your corner of the decentralized web</p>
+        <div class="social-links">
+            <a href="https://bsky.app/profile/bruff.gay" target="_blank">@bruff.gay on Bluesky</a> |
+            <a href="https://github.com/bruff-gay" target="_blank">GitHub</a>
+        </div>
     </div>
 
     <div class="main-content">
         <div class="repo-feature">
-            <h2>Github Repositories</h2>
-            <p>Check out my projects on <a href="https://github.com/bruff-gay">Github</a></p>
+            <h2>GitHub Repositories</h2>
+            <p>Check out my projects on <a href="https://github.com/bruff-gay" target="_blank">GitHub</a>.</p>
             <ul>
                <link rel="stylesheet" href="https://alexgama11.github.io/GitGlue/css/gitstyle.css">
 
@@ -112,6 +122,7 @@
         </div>
 
         <div class="bluesky-iframe">
+            <h2>Latest from Bluesky</h2>
             <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed@latest/dist/bsky-embed.es.js" async></script>
             <bsky-embed
                 username="bruff.gay"
@@ -132,13 +143,11 @@
            (_()_)__/ \
           / _,==.____ \
          (   |--|      )
-         /\_.|__|'-.__/\_
-        / (        /     \
+         /\_.|__|'-.__/\_\n        / (        /     \
         \  \      (      /
          )  '._____)    /
         (((____.--(((____/
         </pre>
     </div>
-<iframe src="https://dataviz.nbcnews.com/projects/20250922-shutdown-ticker/?initialWidth=560&amp;childId=embed-20250922-shutdown-ticker&amp;parentTitle=20250922-shutdown-ticker&amp;parentUrl=https%3A%2F%2Fiframe.nbcnews.com%2FCplyOtTK%3F_showcaption%3Dtrue%26app%3D1" width="100%" scrolling="no" marginheight="0" frameborder="0" height="278px"></iframe>
 </body>
 </html>
