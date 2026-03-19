@@ -26,6 +26,7 @@ window.wander = {
   ],
   pages: [
     'https://bruff.gay/',
+    'https://www.ringthreecircus.org/',
     'https://bruff.gay/RedStumblarr.html'
   ],
 }
