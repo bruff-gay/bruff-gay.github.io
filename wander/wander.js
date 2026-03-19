@@ -25,8 +25,6 @@ window.wander = {
     "https://www.siddharthagolu.com/wander/"
   ],
   pages: [
-    'https://midnight.pub/',
-    'https://susam.net/',
-    'https://susam.net/fizz-buzz-with-cosines.html'
+    'https://bruff.gay/'
   ],
 }
