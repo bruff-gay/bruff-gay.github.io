@@ -26,6 +26,6 @@ window.wander = {
   ],
   pages: [
     'https://bruff.gay/',
-    'https://midnight.pub/'
+    'https://bruff.gay/RedStumblarr.html/'
   ],
 }
