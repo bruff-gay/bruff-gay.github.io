@@ -25,6 +25,7 @@ window.wander = {
     "https://www.siddharthagolu.com/wander/"
   ],
   pages: [
-    'https://bruff.gay/'
+    'https://bruff.gay/',
+    'https://midnight.pub/'
   ],
 }
