@@ -1,2 +1,1 @@
-window.wander = 
-{ consoles: [ "https://bruff.gay/' ], pages: [ 'https://bruff.gay/', 'https://www.ringthreecircus.org/', 'https://bruff.gay/RedStumblarr.html', 'https://demogoats.com/', 'https://tools.rmv.fyi/' ], }
+window.wander = { consoles: [ "https://bruff.gay/' ], pages: [ 'https://bruff.gay/', 'https://www.ringthreecircus.org/', 'https://bruff.gay/RedStumblarr.html', 'https://demogoats.com/', 'https://tools.rmv.fyi/' ], }
